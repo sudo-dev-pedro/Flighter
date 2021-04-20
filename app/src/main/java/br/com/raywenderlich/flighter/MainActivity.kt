@@ -22,4 +22,9 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    override fun onBackPressed() {
+        // Evita que o usuário volte para qualquer tela anterior (Não é o ideal)
+        moveTaskToBack(false)
+    }
 }
