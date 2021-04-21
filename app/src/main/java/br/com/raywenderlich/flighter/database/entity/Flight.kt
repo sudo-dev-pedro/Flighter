@@ -23,7 +23,7 @@ import java.util.*
 data class Flight(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name="id")
-    val id: Long,
+    val id: Long? = null,
 
     @ColumnInfo(name = "departure_city")
     val departureCity: String,
