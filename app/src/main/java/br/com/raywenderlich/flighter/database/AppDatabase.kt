@@ -4,6 +4,7 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import br.com.raywenderlich.flighter.converters.DateConverter
+import br.com.raywenderlich.flighter.dao.AirplaneDAO
 import br.com.raywenderlich.flighter.dao.FlightDAO
 import br.com.raywenderlich.flighter.dao.PassengerDAO
 import br.com.raywenderlich.flighter.database.entity.Airplane
@@ -25,5 +26,6 @@ import br.com.raywenderlich.flighter.database.entity.Passenger
 @TypeConverters(DateConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun passengerDAO(): PassengerDAO
+    abstract fun airplaneDAO(): AirplaneDAO
     abstract fun flightDAO(): FlightDAO
 }
