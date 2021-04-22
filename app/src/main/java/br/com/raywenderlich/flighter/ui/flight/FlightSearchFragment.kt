@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import br.com.raywenderlich.flighter.databinding.FragmentFlightSearchBinding
-import br.com.raywenderlich.flighter.repository.FlightRepositoryImpl
-import br.com.raywenderlich.flighter.repository.PassengerRepositoryImpl
 import org.koin.android.ext.android.inject
 
 class FlightSearchFragment : Fragment() {
