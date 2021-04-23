@@ -55,9 +55,14 @@ class RegisterActivity : AppCompatActivity() {
             val password = registerBinding.passwordInput.text.toString()
             val passport = registerBinding.passportInput.text?.toString()
 
-            val id = cpf.hashCode().toLong()
             val passenger = Passenger(
-                id, cpf, email, password, firstName, lastName, birthDate, passport
+                cpf = cpf,
+                email = email,
+                password = password,
+                firstName = firstName,
+                lastName = lastName,
+                birth_date = birthDate,
+                passportCode = passport
             )
 
             if (email.isNotBlank() && password.isNotBlank()) {

@@ -9,7 +9,7 @@ import br.com.raywenderlich.flighter.database.DatabaseConstants.PASSENGER_TABLE_
 data class Passenger(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name="id")
-    val id: Long,
+    val id: Long? = null,
 
     @ColumnInfo(name = "cpf")
     val cpf: String,
