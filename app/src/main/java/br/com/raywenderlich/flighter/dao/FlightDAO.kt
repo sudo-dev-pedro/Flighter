@@ -12,11 +12,11 @@ import br.com.raywenderlich.flighter.database.entity.Flight
 interface FlightDAO {
 
     @Insert
-    fun insertFlight(flight: Flight)
+    suspend fun insertFlight(flight: Flight)
 
     @Query("SELECT * FROM $FLIGHT_TABLE_NAME WHERE departure_city = :departureCity AND arrival_city = :arrivalCity")
-    fun getFlightResults(departureCity: String, arrivalCity: String): List<Flight>
+    suspend fun getFlightResults(departureCity: String, arrivalCity: String): List<Flight>
 
     @Delete
-    fun deleteFlight(flight: Flight)
+    suspend fun deleteFlight(flight: Flight)
 }

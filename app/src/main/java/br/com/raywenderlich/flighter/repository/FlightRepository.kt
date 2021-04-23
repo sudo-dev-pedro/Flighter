@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import br.com.raywenderlich.flighter.database.entity.Flight
 
 interface FlightRepository {
-    fun insertFlight(flight: Flight)
+    suspend fun insertFlight(flight: Flight)
 
-    fun getFlightResults(departureCity: String, arrivalCity: String): List<Flight>
+    suspend fun getFlightResults(departureCity: String, arrivalCity: String): List<Flight>
 
-    fun deleteFlight(flight: Flight)
+    suspend fun deleteFlight(flight: Flight)
 }
