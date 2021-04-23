@@ -4,9 +4,54 @@ import br.com.raywenderlich.flighter.database.entity.Flight
 
 object FlightsProvider {
 
-    var flightList = initFlightsList()
+    var flightList = initFlightsListTests()
 
-    private fun initFlightsList(): MutableList<Flight> {
+    fun initFlightsList(departureCity: String, arrivalCity: String, departureDate: String): MutableList<Flight> {
+        val flights = mutableListOf<Flight>()
+
+        flights.add(
+            Flight(
+                departureCity = departureCity,
+                arrivalCity = arrivalCity,
+                departureCityInitials = "BSB",
+                arrivalCityInitials = "CWB",
+                departureDate = departureDate,
+                arrivalDate = "22/04/2021",
+                departureTerminal = 'B',
+                arrivalTerminal = 'A',
+                departureGate = "12",
+                arrivalGate = "22",
+                estimatedFlightTime = "3h 15m",
+                airlineName = "BRAZA",
+                totalPrice = 345.0,
+                airplaneID = 1
+            )
+        )
+
+        // Que horas o voo parte?
+        // Que horas o voo chega?
+        flights.add(
+            Flight(
+                departureCity = departureCity,
+                arrivalCity = arrivalCity,
+                departureCityInitials = "BSB",
+                arrivalCityInitials = "CWB",
+                departureDate = departureDate,
+                arrivalDate = "22/04/2021",
+                departureTerminal = 'B',
+                arrivalTerminal = 'A',
+                departureGate = "12",
+                arrivalGate = "22",
+                estimatedFlightTime = "3h 15m",
+                airlineName = "BRAZA",
+                totalPrice = 345.0,
+                airplaneID = 1
+            )
+        )
+
+        return flights
+    }
+    private fun initFlightsListTests(): MutableList<Flight> {
         val flights = mutableListOf<Flight>()
 
         flights.add(
@@ -15,8 +60,8 @@ object FlightsProvider {
                 arrivalCity = "Curitiba",
                 departureCityInitials = "BSB",
                 arrivalCityInitials = "CWB",
-                departureDate = "21/04/2021",
-                arrivalDate = "21/04/2021",
+                departureDate = "22/04/2021",
+                arrivalDate = "22/04/2021",
                 departureTerminal = 'B',
                 arrivalTerminal = 'A',
                 departureGate = "12",
@@ -36,8 +81,8 @@ object FlightsProvider {
                 arrivalCity = "Curitiba",
                 departureCityInitials = "BSB",
                 arrivalCityInitials = "CWB",
-                departureDate = "21/04/2021",
-                arrivalDate = "21/04/2021",
+                departureDate = "22/04/2021",
+                arrivalDate = "22/04/2021",
                 departureTerminal = 'B',
                 arrivalTerminal = 'A',
                 departureGate = "12",
