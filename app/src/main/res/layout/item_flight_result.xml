@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="5dp">
+    android:layout_marginBottom="24dp"
+    app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,14 +23,14 @@
             tools:text="XXX" />
 
         <TextView
-            android:id="@+id/departTime"
+            android:id="@+id/departTimeResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_light"
             android:textColor="@color/black_font_color"
             android:textSize="@dimen/arrive_depart_hour"
-            app:layout_constraintStart_toStartOf="@id/fromInitialsResult"
             app:layout_constraintEnd_toEndOf="@id/fromInitialsResult"
+            app:layout_constraintStart_toStartOf="@id/fromInitialsResult"
             app:layout_constraintTop_toBottomOf="@id/fromInitialsResult"
             tools:text="08:05 AM" />
 
@@ -60,14 +61,14 @@
             tools:text="ZZZ" />
 
         <TextView
-            android:id="@+id/arriveTime"
+            android:id="@+id/arriveTimeResult"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_light"
             android:textColor="@color/black_font_color"
             android:textSize="@dimen/arrive_depart_hour"
-            app:layout_constraintStart_toStartOf="@id/toInitialsResult"
             app:layout_constraintEnd_toEndOf="@id/toInitialsResult"
+            app:layout_constraintStart_toStartOf="@id/toInitialsResult"
             app:layout_constraintTop_toBottomOf="@id/toInitialsResult"
             tools:text="08:05 AM" />
 
@@ -78,7 +79,7 @@
             android:layout_marginTop="12dp"
             android:textColor="@color/black_font_color"
             app:layout_constraintStart_toStartOf="@id/fromInitialsResult"
-            app:layout_constraintTop_toBottomOf="@id/departTime"
+            app:layout_constraintTop_toBottomOf="@id/departTimeResult"
             tools:text="AIRLINE" />
 
         <TextView

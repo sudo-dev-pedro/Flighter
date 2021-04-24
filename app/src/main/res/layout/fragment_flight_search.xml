@@ -65,6 +65,7 @@
     </LinearLayout>
 
     <ProgressBar
+        android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
@@ -83,12 +84,11 @@
         app:layout_constraintTop_toBottomOf="@id/flightDepartDateSearch"/>
 -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/flightsResult"
+        android:id="@+id/rvFlightsResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toBottomOf="@id/flightDepartDateSearch"
-        tools:layout_editor_absoluteX="0dp"
         tools:listitem="@layout/item_flight_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
