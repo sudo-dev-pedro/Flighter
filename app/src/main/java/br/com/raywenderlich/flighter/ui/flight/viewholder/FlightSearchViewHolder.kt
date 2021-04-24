@@ -11,8 +11,8 @@ class FlightSearchViewHolder(
 
     val fromInitials: TextView = itemView.findViewById(R.id.fromInitialsResult)
     val toInitials: TextView = itemView.findViewById(R.id.toInitialsResult)
-    val departTime: TextView = itemView.findViewById(R.id.departTime)
-    val arriveTime: TextView = itemView.findViewById(R.id.arriveTime)
+    val departTime: TextView = itemView.findViewById(R.id.departTimeResult)
+    val arriveTime: TextView = itemView.findViewById(R.id.arriveTimeResult)
     val estimatedFlightTIme: TextView = itemView.findViewById(R.id.estimatedFlightTime)
     val flightPrice: TextView = itemView.findViewById(R.id.flightPrice)
 }

@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import br.com.raywenderlich.flighter.databinding.FragmentFlightSearchBinding
+import br.com.raywenderlich.flighter.ui.flight.adapter.FlightSearchAdapter
 import org.koin.android.ext.android.inject
 
 class FlightSearchFragment : Fragment() {
@@ -15,7 +17,10 @@ class FlightSearchFragment : Fragment() {
     private var param3: String? = null
 
     private var searchBinding: FragmentFlightSearchBinding? = null
+    private var rvFlightsResult: RecyclerView? = null
+
     private val flightSearchViewModel: FlightSearchViewModel by inject()
+    private val flightSearchAdapter: FlightSearchAdapter by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +44,8 @@ class FlightSearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initRecyclerView()
+
         searchBinding?.fromCityNameSearch?.text = param1
         searchBinding?.toCityNameSearch?.text = param2
         searchBinding?.flightDepartDateResult?.text = param3
@@ -54,6 +61,20 @@ class FlightSearchFragment : Fragment() {
             searchBinding?.fromCityNameSearch?.text.toString(),
             searchBinding?.toCityNameSearch?.text.toString()
         )
+
+        observeLiveData()
+    }
+
+    private fun observeLiveData() {
+        flightSearchViewModel.flightResults.observe(viewLifecycleOwner) {
+            flightSearchAdapter.updateFlightList(it)
+        }
+    }
+
+    private fun initRecyclerView() {
+        rvFlightsResult = searchBinding?.rvFlightsResult
+        rvFlightsResult?.adapter = flightSearchAdapter
+        rvFlightsResult?.setHasFixedSize(true)
     }
 
     // Irei precisar usar isso em algum local?
