@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
     }
 
-    override fun onBackPressed() {
-        // Evita que o usuário volte para qualquer tela anterior (Não é o ideal)
-        moveTaskToBack(false)
-    }
+//    override fun onBackPressed() {
+//        // Evita que o usuário volte para qualquer tela anterior (Não é o ideal)
+//        moveTaskToBack(false)
+//    }
 }
