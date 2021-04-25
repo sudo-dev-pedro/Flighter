@@ -17,6 +17,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var loginBinding: ActivityLoginBinding
     private lateinit var view: ConstraintLayout
     private lateinit var sharedPreferences: SharedPreferences
+
     private val loginViewModel: LoginViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +41,8 @@ class LoginActivity : AppCompatActivity() {
             Intent(
                 this,
                 MainActivity::class.java
+            ).addFlags(
+                Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
             )
         )
     }
@@ -82,12 +85,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun createNewAccount() {
         loginBinding.txtRegister.setOnClickListener {
-            startActivity(
-                Intent(
-                    this,
-                    RegisterActivity::class.java
-                )
-            )
+            redirectPassengerWithoutAccount()
         }
     }
 }
