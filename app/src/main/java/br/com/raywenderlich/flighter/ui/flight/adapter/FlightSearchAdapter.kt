@@ -10,7 +10,7 @@ import br.com.raywenderlich.flighter.ui.flight.viewholder.FlightSearchViewHolder
 class FlightSearchAdapter : RecyclerView.Adapter<FlightSearchViewHolder>() {
 
     private var flightList: List<Flight> = emptyList()
-    private var onClickAction: (flight: Flight) -> Unit = {}
+    var onClickAction: (flight: Flight) -> Unit = {}
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FlightSearchViewHolder {
         val item = LayoutInflater
@@ -31,10 +31,9 @@ class FlightSearchAdapter : RecyclerView.Adapter<FlightSearchViewHolder>() {
             holder.departTime.text = flightList[position].departureDate
             // Formate para o formato de reais
             holder.flightPrice.text = flightList[position].totalPrice.toString()
-
-//            setOnClickListener {
-//                onClickAction(flightList[position])
-//            }
+            setOnClickListener {
+                onClickAction(flightList[position])
+            }
         }
     }
 

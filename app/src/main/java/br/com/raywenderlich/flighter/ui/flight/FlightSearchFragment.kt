@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import br.com.raywenderlich.flighter.R
+import br.com.raywenderlich.flighter.database.entity.Flight
 import br.com.raywenderlich.flighter.databinding.FragmentFlightSearchBinding
 import br.com.raywenderlich.flighter.ui.flight.adapter.FlightSearchAdapter
 import org.koin.android.ext.android.inject
@@ -75,32 +78,31 @@ class FlightSearchFragment : Fragment() {
         rvFlightsResult = searchBinding?.rvFlightsResult
         rvFlightsResult?.adapter = flightSearchAdapter
         rvFlightsResult?.setHasFixedSize(true)
+        flightSearchAdapter.onClickItem {
+            navigateToFlightDetails(it)
+        }
     }
 
-    // Irei precisar usar isso em algum local?
-    companion object {
+    private fun navigateToFlightDetails(flight: Flight) {
+        findNavController()
+            .navigate(
+                R.id.action_navigation_search_to_navigation_flight_details,
+                prepareBundle(flight)
+            )
+    }
 
+    private fun prepareBundle(flight: Flight): Bundle {
+        return Bundle().apply {
+            flight.id?.let {
+                putLong(FLIGHT_ID, it)
+            }
+        }
+    }
+
+    companion object {
         private const val ARG_PARAM1 = "DEPARTURE"
         private const val ARG_PARAM2 = "ARRIVAL"
         private const val ARG_PARAM3 = "DATE"
-
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment SearchFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String, param3: String) =
-            FlightSearchFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                    putString(ARG_PARAM3, param3)
-                }
-            }
+        private const val FLIGHT_ID = "FLIGHT_ID"
     }
 }

@@ -15,11 +15,15 @@ class FlightSearchViewModel(
 
     private val _flightResults = MutableLiveData<List<Flight>>()
     val flightResults: LiveData<List<Flight>>
-    get() = _flightResults
+        get() = _flightResults
 
     fun generateFlightsDemoData(departureCity: String, arrivalCity: String, departureDate: String) {
         viewModelScope.launch {
-            for (flight in FlightsProvider.initFlightsList(departureCity, arrivalCity, departureDate)) {
+            for (flight in FlightsProvider.initFlightsList(
+                departureCity,
+                arrivalCity,
+                departureDate
+            )) {
                 flightRepositoryImpl.insertFlight(flight)
             }
         }
@@ -27,7 +31,12 @@ class FlightSearchViewModel(
 
     fun getFlights(departureCity: String, arrivalCity: String) {
         viewModelScope.launch {
-            _flightResults.value = flightRepositoryImpl.getFlightResults(departureCity, arrivalCity)
+            _flightResults.postValue(
+                flightRepositoryImpl.getFlightResults(
+                    departureCity,
+                    arrivalCity
+                )
+            )
         }
     }
 }
