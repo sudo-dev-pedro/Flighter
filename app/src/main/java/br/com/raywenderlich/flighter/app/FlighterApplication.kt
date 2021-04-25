@@ -5,6 +5,7 @@ import android.content.SharedPreferences
 import androidx.room.Room
 import br.com.raywenderlich.flighter.database.AppDatabase
 import br.com.raywenderlich.flighter.database.DatabaseConstants.DATABASE_NAME
+import br.com.raywenderlich.flighter.di.adapterModule
 import br.com.raywenderlich.flighter.di.appModule
 import br.com.raywenderlich.flighter.di.viewModelModule
 import org.koin.android.ext.koin.androidContext
@@ -26,7 +27,8 @@ class FlighterApplication : Application() {
             modules(
                 listOf(
                     appModule,
-                    viewModelModule
+                    viewModelModule,
+                    adapterModule
                 )
             )
         }
