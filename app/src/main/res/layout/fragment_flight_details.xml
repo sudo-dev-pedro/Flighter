@@ -60,7 +60,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/from_initials_margin_top"
             android:fontFamily="@font/montserrat_medium"
-            android:text="@string/smart_pass_title"
             android:textAlignment="center"
             android:textColor="@color/black_font_color"
             android:textSize="@dimen/from_to_font_size"
@@ -102,8 +101,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
-            android:textColor="@color/black_font_color"
-            tools:text="Flight" />
+            android:text="@string/flight_id"
+            android:textColor="@color/black_font_color" />
 
         <TextView
             android:id="@+id/flightCodeContent"
@@ -119,8 +118,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
-            android:textColor="@color/black_font_color"
-            tools:text="Estimated Flight Time" />
+            android:text="@string/estimated_flight_time"
+            android:textColor="@color/black_font_color" />
 
         <TextView
             android:id="@+id/passengerNameContent"
@@ -137,6 +136,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat"
             android:textColor="@color/black_font_color"
+            android:text="@string/airplane"
             tools:text="Airplane" />
 
         <TextView
@@ -172,11 +172,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/flight_price_title_margin_top"
         android:fontFamily="@font/montserrat"
+        android:text="@string/total_price"
         android:textAlignment="center"
         android:textColor="@color/black_font_color"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/flightDetailsOne"
-        tools:text="Total Price" />
+        app:layout_constraintTop_toBottomOf="@id/flightDetailsOne" />
 
     <TextView
         android:id="@+id/flightPriceContent"
