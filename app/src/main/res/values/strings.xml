@@ -42,5 +42,9 @@
     <string name="btn_confirm_booking">Confirm booking</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="airplane">Airplane</string>
+    <string name="estimated_flight_time">Estimated Flight Time</string>
+    <string name="flight_id">Flight ID</string>
+    <string name="total_price">Total Price</string>
 
 </resources>
