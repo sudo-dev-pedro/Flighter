@@ -39,7 +39,7 @@ class PassengerRepositoryImplTest : KoinTest {
 
         // Criar modulo no Start = True
         // O Override seria relacionado a o que?
-        val module = module(true, true) {
+        val module = module(createdAtStart = true, override = true) {
             single { passengerDAO }
         }
 
