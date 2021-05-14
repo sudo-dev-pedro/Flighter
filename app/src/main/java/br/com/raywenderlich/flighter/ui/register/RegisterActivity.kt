@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.lifecycleScope
 import br.com.raywenderlich.flighter.MainActivity
+import br.com.raywenderlich.flighter.R
 import br.com.raywenderlich.flighter.database.entity.Passenger
 import br.com.raywenderlich.flighter.databinding.ActivityRegisterBinding
 import br.com.raywenderlich.flighter.repository.PassengerRepositoryImpl
@@ -17,14 +18,13 @@ import org.koin.android.ext.android.inject
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var registerBinding: ActivityRegisterBinding
-    private lateinit var view: ConstraintLayout
     private val passengerRepository: PassengerRepositoryImpl by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         registerBinding = ActivityRegisterBinding.inflate(layoutInflater)
-        view = registerBinding.root
+        val view = registerBinding.root
         setContentView(view)
 
         grabPassengerData()
