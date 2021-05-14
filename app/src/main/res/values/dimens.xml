@@ -9,16 +9,16 @@
     <dimen name="btn_margin_top">40dp</dimen>
     <dimen name="login_inputs_margin_top">16dp</dimen>
     <dimen name="register_margin_top">24dp</dimen>
-    <dimen name="app_name_margin_top">120dp</dimen>
+    <dimen name="app_name_margin_top">60dp</dimen>
 
     <!-- Login Text Size -->
     <dimen name="register_font_size">16sp</dimen>
 
     <!-- Home Views Size -->
-    <dimen name="book_text_margin_top">56dp</dimen>
-    <dimen name="book_text_margin_start">40dp</dimen>
-    <dimen name="book_text_margin_end">40dp</dimen>
-    <dimen name="inputs_margin_top">32dp</dimen>
+    <dimen name="input_text_margin_top">56dp</dimen>
+    <dimen name="input_text_margin_start">40dp</dimen>
+    <dimen name="input_text_margin_end">40dp</dimen>
+    <dimen name="input_margin_top">32dp</dimen>
 
     <!-- Home Text Size -->
     <dimen name="book_font_size">24sp</dimen>
