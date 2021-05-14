@@ -103,6 +103,6 @@ class FlightSearchFragment : Fragment() {
         private const val ARG_PARAM1 = "DEPARTURE"
         private const val ARG_PARAM2 = "ARRIVAL"
         private const val ARG_PARAM3 = "DATE"
-        private const val FLIGHT_ID = "FLIGHT_ID"
+        const val FLIGHT_ID = "FLIGHT_ID"
     }
 }
