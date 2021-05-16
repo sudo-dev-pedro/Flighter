@@ -17,9 +17,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
             android:id="@+id/airlineName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:textColor="@color/black_font_color"
             tools:text="CAPITAL AIRLINES" />
 
@@ -122,7 +125,7 @@
             android:textColor="@color/black_font_color" />
 
         <TextView
-            android:id="@+id/passengerNameContent"
+            android:id="@+id/estimatedFlightTimeContent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/flight_code_content_margin_bottom"
