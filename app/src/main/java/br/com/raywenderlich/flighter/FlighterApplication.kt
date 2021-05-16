@@ -1,7 +1,6 @@
-package br.com.raywenderlich.flighter.app
+package br.com.raywenderlich.flighter
 
 import android.app.Application
-import android.content.SharedPreferences
 import androidx.room.Room
 import br.com.raywenderlich.flighter.database.AppDatabase
 import br.com.raywenderlich.flighter.database.DatabaseConstants.DATABASE_NAME
