@@ -8,5 +8,7 @@ interface FlightRepository {
 
     suspend fun getFlightResults(departureCity: String, arrivalCity: String): List<Flight>
 
+    suspend fun getFlightById(flightId: Long?): Flight
+
     suspend fun deleteFlight(flight: Flight)
 }

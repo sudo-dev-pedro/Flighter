@@ -16,6 +16,8 @@ class FlightRepositoryImpl(
         arrivalCity: String
     ): List<Flight> = flightDAO.getFlightResults(departureCity, arrivalCity)
 
+    override suspend fun getFlightById(flightId: Long?): Flight = flightDAO.getFlightById(flightId)
+
     override suspend fun deleteFlight(flight: Flight) {
         TODO("Not yet implemented")
     }
