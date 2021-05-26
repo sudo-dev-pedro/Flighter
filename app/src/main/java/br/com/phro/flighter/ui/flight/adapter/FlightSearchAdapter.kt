@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.raywenderlich.flighter.R
 import br.com.raywenderlich.flighter.database.entity.Flight
 import br.com.raywenderlich.flighter.ui.flight.viewholder.FlightSearchViewHolder
+import br.com.raywenderlich.flighter.utils.CurrencyFormat.Companion.currencyFormat
 
 class FlightSearchAdapter : RecyclerView.Adapter<FlightSearchViewHolder>() {
 
@@ -29,8 +30,9 @@ class FlightSearchAdapter : RecyclerView.Adapter<FlightSearchViewHolder>() {
             holder.estimatedFlightTIme.text = flightList[position].estimatedFlightTime
             holder.arriveTime.text = flightList[position].arrivalDate
             holder.departTime.text = flightList[position].departureDate
-            // Formate para o formato de reais
-            holder.flightPrice.text = flightList[position].totalPrice.toString()
+            holder.airlineName.text = flightList[position].airlineName
+            holder.flightPrice.text = currencyFormat(flightList[position].totalPrice)
+
             setOnClickListener {
                 onClickAction(flightList[position])
             }

@@ -9,7 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import br.com.raywenderlich.flighter.MainActivity
 import br.com.raywenderlich.flighter.databinding.ActivityLoginBinding
 import br.com.raywenderlich.flighter.ui.register.RegisterActivity
-import br.com.raywenderlich.flighter.app.FlighterApplication.Companion.PASSENGER_HASH_CODE
+import br.com.raywenderlich.flighter.FlighterApplication.Companion.PASSENGER_HASH_CODE
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginActivity : AppCompatActivity() {

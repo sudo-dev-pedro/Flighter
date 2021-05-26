@@ -15,4 +15,5 @@ class FlightSearchViewHolder(
     val arriveTime: TextView = itemView.findViewById(R.id.arriveTimeResult)
     val estimatedFlightTIme: TextView = itemView.findViewById(R.id.estimatedFlightTime)
     val flightPrice: TextView = itemView.findViewById(R.id.flightPrice)
+    val airlineName: TextView = itemView.findViewById(R.id.airlineName)
 }
