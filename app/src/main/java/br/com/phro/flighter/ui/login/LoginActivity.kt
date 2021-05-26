@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.ui.login
+package br.com.phro.flighter.ui.login
 
 import android.content.Context
 import android.content.Intent
@@ -6,10 +6,10 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.constraintlayout.widget.ConstraintLayout
-import br.com.raywenderlich.flighter.MainActivity
-import br.com.raywenderlich.flighter.databinding.ActivityLoginBinding
-import br.com.raywenderlich.flighter.ui.register.RegisterActivity
-import br.com.raywenderlich.flighter.FlighterApplication.Companion.PASSENGER_HASH_CODE
+import br.com.phro.flighter.MainActivity
+import br.com.phro.flighter.databinding.ActivityLoginBinding
+import br.com.phro.flighter.ui.register.RegisterActivity
+import br.com.phro.flighter.FlighterApplication.Companion.PASSENGER_HASH_CODE
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class LoginActivity : AppCompatActivity() {

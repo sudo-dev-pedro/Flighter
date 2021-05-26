@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.ui.flight.adapter
+package br.com.phro.flighter.ui.flight.adapter
 
 class GenericAdapter {
 }

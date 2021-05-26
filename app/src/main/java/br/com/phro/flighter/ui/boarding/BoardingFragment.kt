@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.ui.boarding
+package br.com.phro.flighter.ui.boarding
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import br.com.raywenderlich.flighter.R
+import br.com.phro.flighter.R
 
 class BoardingFragment : Fragment() {
 

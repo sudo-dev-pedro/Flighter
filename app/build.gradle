@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "br.com.raywenderlich.flighter"
+        applicationId "br.com.phro.flighter"
         minSdkVersion 24
         targetSdkVersion 30
         versionCode 1

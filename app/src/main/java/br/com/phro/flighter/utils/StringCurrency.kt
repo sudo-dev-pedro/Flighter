@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.utils
+package br.com.phro.flighter.utils
 
 import java.text.NumberFormat
 import java.util.Locale

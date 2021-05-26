@@ -1,16 +1,16 @@
-package br.com.raywenderlich.flighter.database
+package br.com.phro.flighter.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import br.com.raywenderlich.flighter.converters.DateConverter
-import br.com.raywenderlich.flighter.dao.AirplaneDAO
-import br.com.raywenderlich.flighter.dao.FlightDAO
-import br.com.raywenderlich.flighter.dao.PassengerDAO
-import br.com.raywenderlich.flighter.database.entity.Airplane
-import br.com.raywenderlich.flighter.database.entity.Book
-import br.com.raywenderlich.flighter.database.entity.Flight
-import br.com.raywenderlich.flighter.database.entity.Passenger
+import br.com.phro.flighter.converters.DateConverter
+import br.com.phro.flighter.dao.AirplaneDAO
+import br.com.phro.flighter.dao.FlightDAO
+import br.com.phro.flighter.dao.PassengerDAO
+import br.com.phro.flighter.database.entity.Airplane
+import br.com.phro.flighter.database.entity.Book
+import br.com.phro.flighter.database.entity.Flight
+import br.com.phro.flighter.database.entity.Passenger
 
 @Database(
     entities = [

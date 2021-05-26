@@ -1,9 +1,9 @@
-package br.com.raywenderlich.flighter.ui.flight.viewholder
+package br.com.phro.flighter.ui.flight.viewholder
 
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import br.com.raywenderlich.flighter.R
+import br.com.phro.flighter.R
 
 class FlightSearchViewHolder(
     itemView: View

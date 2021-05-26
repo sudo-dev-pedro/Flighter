@@ -1,6 +1,6 @@
-package br.com.raywenderlich.flighter.repository
+package br.com.phro.flighter.repository
 
-import br.com.raywenderlich.flighter.database.entity.Passenger
+import br.com.phro.flighter.database.entity.Passenger
 
 interface PassengerRepository {
     suspend fun insertPassenger(passenger: Passenger)

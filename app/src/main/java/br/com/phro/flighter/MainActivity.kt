@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter
+package br.com.phro.flighter
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView

@@ -50,7 +50,7 @@
     <!-- Search Font Size -->
     <dimen name="from_to_initials_search_font_size">32sp</dimen>
     <dimen name="from_to_city_name_search_font_size">20sp</dimen>
-    <dimen name="flight_price_font_size">24sp</dimen>
+    <dimen name="flight_price_font_size">20sp</dimen>
 
     <!-- Flight Details Views Size -->
     <dimen name="flight_price_title_margin_top">40dp</dimen>

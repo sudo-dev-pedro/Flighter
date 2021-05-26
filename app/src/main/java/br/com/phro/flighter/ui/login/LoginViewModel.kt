@@ -1,10 +1,10 @@
-package br.com.raywenderlich.flighter.ui.login
+package br.com.phro.flighter.ui.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import br.com.raywenderlich.flighter.repository.PassengerRepositoryImpl
+import br.com.phro.flighter.repository.PassengerRepositoryImpl
 import kotlinx.coroutines.launch
 
 class LoginViewModel(

@@ -1,6 +1,6 @@
-package br.com.raywenderlich.flighter.di
+package br.com.phro.flighter.di
 
-import br.com.raywenderlich.flighter.ui.flight.adapter.FlightSearchAdapter
+import br.com.phro.flighter.ui.flight.adapter.FlightSearchAdapter
 import org.koin.dsl.module
 
 val adapterModule = module {

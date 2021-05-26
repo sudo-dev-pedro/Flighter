@@ -1,8 +1,8 @@
-package br.com.raywenderlich.flighter.di
+package br.com.phro.flighter.di
 
-import br.com.raywenderlich.flighter.FlighterApplication
-import br.com.raywenderlich.flighter.repository.FlightRepositoryImpl
-import br.com.raywenderlich.flighter.repository.PassengerRepositoryImpl
+import br.com.phro.flighter.FlighterApplication
+import br.com.phro.flighter.repository.FlightRepositoryImpl
+import br.com.phro.flighter.repository.PassengerRepositoryImpl
 import org.koin.dsl.module
 
 val appModule = module {

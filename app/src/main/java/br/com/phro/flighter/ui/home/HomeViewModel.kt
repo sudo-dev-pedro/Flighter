@@ -1,7 +1,5 @@
-package br.com.raywenderlich.flighter.ui.home
+package br.com.phro.flighter.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class HomeViewModel : ViewModel() {

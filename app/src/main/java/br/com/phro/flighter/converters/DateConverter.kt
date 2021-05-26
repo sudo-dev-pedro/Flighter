@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.converters
+package br.com.phro.flighter.converters
 
 import androidx.room.TypeConverter
 import java.util.*

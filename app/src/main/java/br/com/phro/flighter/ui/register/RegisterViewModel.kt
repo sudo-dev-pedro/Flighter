@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.ui.register
+package br.com.phro.flighter.ui.register
 
 class RegisterViewModel {
 }

@@ -25,7 +25,7 @@
     <string name="depart_hint">depart date</string>
 
     <!-- BOARDING PASS -->
-    <string name="title_boarding">Upcoming flights</string>
+    <string name="title_boarding">My Flights</string>
 
     <!-- ITEM BOARDING PASS -->
     <!-- Essas infos precisam ser preenchidas programaticamente -->

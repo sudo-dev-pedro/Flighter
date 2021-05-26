@@ -1,7 +1,6 @@
-package br.com.raywenderlich.flighter.repository
+package br.com.phro.flighter.repository
 
-import androidx.lifecycle.LiveData
-import br.com.raywenderlich.flighter.database.entity.Flight
+import br.com.phro.flighter.database.entity.Flight
 
 interface FlightRepository {
     suspend fun insertFlight(flight: Flight)

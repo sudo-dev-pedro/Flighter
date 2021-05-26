@@ -1,7 +1,7 @@
-package br.com.raywenderlich.flighter.database.entity
+package br.com.phro.flighter.database.entity
 
 import androidx.room.*
-import br.com.raywenderlich.flighter.database.DatabaseConstants.BOOK_TABLE_NAME
+import br.com.phro.flighter.database.DatabaseConstants.BOOK_TABLE_NAME
 
 @Entity(
     tableName = BOOK_TABLE_NAME,

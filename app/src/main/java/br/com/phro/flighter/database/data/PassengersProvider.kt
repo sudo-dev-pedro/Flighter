@@ -1,6 +1,6 @@
-package br.com.raywenderlich.flighter.database.data
+package br.com.phro.flighter.database.data
 
-import br.com.raywenderlich.flighter.database.entity.Passenger
+import br.com.phro.flighter.database.entity.Passenger
 
 // Singleton
 object PassengersProvider {

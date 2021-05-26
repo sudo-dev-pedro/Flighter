@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter
+package br.com.phro.flighter
 
 import android.content.Context
 import android.util.Log
@@ -6,9 +6,9 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import br.com.raywenderlich.flighter.dao.AirplaneDAO
-import br.com.raywenderlich.flighter.database.AppDatabase
-import br.com.raywenderlich.flighter.database.data.AirplanesProvider
+import br.com.phro.flighter.dao.AirplaneDAO
+import br.com.phro.flighter.database.AppDatabase
+import br.com.phro.flighter.database.data.AirplanesProvider
 import kotlinx.coroutines.runBlocking
 import org.junit.*
 import org.junit.rules.TestRule

@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.ui.home
+package br.com.phro.flighter.ui.home
 
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import br.com.raywenderlich.flighter.R
-import br.com.raywenderlich.flighter.databinding.FragmentHomeBinding
+import br.com.phro.flighter.R
+import br.com.phro.flighter.databinding.FragmentHomeBinding
 import java.text.SimpleDateFormat
 import java.util.*
 

@@ -1,12 +1,12 @@
-package br.com.raywenderlich.flighter.ui.flight.adapter
+package br.com.phro.flighter.ui.flight.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import br.com.raywenderlich.flighter.R
-import br.com.raywenderlich.flighter.database.entity.Flight
-import br.com.raywenderlich.flighter.ui.flight.viewholder.FlightSearchViewHolder
-import br.com.raywenderlich.flighter.utils.CurrencyFormat.Companion.currencyFormat
+import br.com.phro.flighter.R
+import br.com.phro.flighter.database.entity.Flight
+import br.com.phro.flighter.ui.flight.viewholder.FlightSearchViewHolder
+import br.com.phro.flighter.utils.CurrencyFormat.Companion.currencyFormat
 
 class FlightSearchAdapter : RecyclerView.Adapter<FlightSearchViewHolder>() {
 

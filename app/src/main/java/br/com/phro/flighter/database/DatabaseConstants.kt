@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.database
+package br.com.phro.flighter.database
 
 object DatabaseConstants {
     /* TABLES NAMES */

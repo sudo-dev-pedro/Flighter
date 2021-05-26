@@ -1,7 +1,7 @@
-package br.com.raywenderlich.flighter.repository
+package br.com.phro.flighter.repository
 
-import br.com.raywenderlich.flighter.dao.FlightDAO
-import br.com.raywenderlich.flighter.database.entity.Flight
+import br.com.phro.flighter.dao.FlightDAO
+import br.com.phro.flighter.database.entity.Flight
 
 class FlightRepositoryImpl(
     private val flightDAO: FlightDAO

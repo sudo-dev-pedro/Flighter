@@ -1,8 +1,8 @@
-package br.com.raywenderlich.flighter.dao
+package br.com.phro.flighter.dao
 
 import androidx.room.*
-import br.com.raywenderlich.flighter.database.DatabaseConstants
-import br.com.raywenderlich.flighter.database.entity.Airplane
+import br.com.phro.flighter.database.DatabaseConstants
+import br.com.phro.flighter.database.entity.Airplane
 
 @Dao
 interface AirplaneDAO {

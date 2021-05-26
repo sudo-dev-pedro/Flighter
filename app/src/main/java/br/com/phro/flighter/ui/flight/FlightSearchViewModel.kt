@@ -1,12 +1,12 @@
-package br.com.raywenderlich.flighter.ui.flight
+package br.com.phro.flighter.ui.flight
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import br.com.raywenderlich.flighter.database.data.FlightsProvider
-import br.com.raywenderlich.flighter.database.entity.Flight
-import br.com.raywenderlich.flighter.repository.FlightRepositoryImpl
+import br.com.phro.flighter.database.data.FlightsProvider
+import br.com.phro.flighter.database.entity.Flight
+import br.com.phro.flighter.repository.FlightRepositoryImpl
 import kotlinx.coroutines.launch
 
 class FlightSearchViewModel(

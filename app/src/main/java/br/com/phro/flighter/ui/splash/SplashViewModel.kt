@@ -1,9 +1,9 @@
-package br.com.raywenderlich.flighter.ui.splash
+package br.com.phro.flighter.ui.splash
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import br.com.raywenderlich.flighter.database.data.FlightsProvider
-import br.com.raywenderlich.flighter.repository.FlightRepositoryImpl
+import br.com.phro.flighter.database.data.FlightsProvider
+import br.com.phro.flighter.repository.FlightRepositoryImpl
 import kotlinx.coroutines.launch
 import org.koin.core.component.KoinApiExtension
 import org.koin.core.component.KoinComponent

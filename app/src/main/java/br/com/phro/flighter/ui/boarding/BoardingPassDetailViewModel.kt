@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.ui.boarding
+package br.com.phro.flighter.ui.boarding
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

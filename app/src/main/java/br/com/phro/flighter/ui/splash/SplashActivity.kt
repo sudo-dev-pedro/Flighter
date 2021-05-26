@@ -1,10 +1,10 @@
-package br.com.raywenderlich.flighter.ui.splash
+package br.com.phro.flighter.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.raywenderlich.flighter.R
-import br.com.raywenderlich.flighter.ui.login.LoginActivity
+import br.com.phro.flighter.R
+import br.com.phro.flighter.ui.login.LoginActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

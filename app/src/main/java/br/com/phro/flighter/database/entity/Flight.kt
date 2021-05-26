@@ -1,11 +1,10 @@
-package br.com.raywenderlich.flighter.database.entity
+package br.com.phro.flighter.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-import br.com.raywenderlich.flighter.database.DatabaseConstants.FLIGHT_TABLE_NAME
-import java.util.*
+import br.com.phro.flighter.database.DatabaseConstants.FLIGHT_TABLE_NAME
 
 @Entity(
     tableName = FLIGHT_TABLE_NAME,

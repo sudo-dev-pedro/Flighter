@@ -1,9 +1,9 @@
-package br.com.raywenderlich.flighter
+package br.com.phro.flighter
 
-import br.com.raywenderlich.flighter.dao.PassengerDAO
-import br.com.raywenderlich.flighter.database.entity.Passenger
-import br.com.raywenderlich.flighter.di.appModule
-import br.com.raywenderlich.flighter.repository.PassengerRepositoryImpl
+import br.com.phro.flighter.dao.PassengerDAO
+import br.com.phro.flighter.database.entity.Passenger
+import br.com.phro.flighter.di.appModule
+import br.com.phro.flighter.repository.PassengerRepositoryImpl
 import io.mockk.*
 import io.mockk.impl.annotations.MockK
 import junit.framework.TestCase

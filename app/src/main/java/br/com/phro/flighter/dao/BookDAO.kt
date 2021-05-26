@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter.dao
+package br.com.phro.flighter.dao
 
 interface BookDAO {
 }

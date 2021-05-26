@@ -1,4 +1,4 @@
-package br.com.raywenderlich.flighter
+package br.com.phro.flighter
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import org.junit.runner.RunWith

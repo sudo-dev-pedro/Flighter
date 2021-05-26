@@ -1,15 +1,13 @@
-package br.com.raywenderlich.flighter.ui.register
+package br.com.phro.flighter.ui.register
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.lifecycle.lifecycleScope
-import br.com.raywenderlich.flighter.MainActivity
-import br.com.raywenderlich.flighter.R
-import br.com.raywenderlich.flighter.database.entity.Passenger
-import br.com.raywenderlich.flighter.databinding.ActivityRegisterBinding
-import br.com.raywenderlich.flighter.repository.PassengerRepositoryImpl
+import br.com.phro.flighter.MainActivity
+import br.com.phro.flighter.database.entity.Passenger
+import br.com.phro.flighter.databinding.ActivityRegisterBinding
+import br.com.phro.flighter.repository.PassengerRepositoryImpl
 import kotlinx.coroutines.Dispatchers.Main
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

@@ -1,9 +1,9 @@
-package br.com.raywenderlich.flighter.database.entity
+package br.com.phro.flighter.database.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import br.com.raywenderlich.flighter.database.DatabaseConstants.PASSENGER_TABLE_NAME
+import br.com.phro.flighter.database.DatabaseConstants.PASSENGER_TABLE_NAME
 
 @Entity(tableName = PASSENGER_TABLE_NAME)
 data class Passenger(

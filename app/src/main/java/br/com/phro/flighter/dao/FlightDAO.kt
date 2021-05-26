@@ -1,11 +1,11 @@
-package br.com.raywenderlich.flighter.dao
+package br.com.phro.flighter.dao
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import br.com.raywenderlich.flighter.database.DatabaseConstants.FLIGHT_TABLE_NAME
-import br.com.raywenderlich.flighter.database.entity.Flight
+import br.com.phro.flighter.database.DatabaseConstants.FLIGHT_TABLE_NAME
+import br.com.phro.flighter.database.entity.Flight
 
 @Dao
 interface FlightDAO {

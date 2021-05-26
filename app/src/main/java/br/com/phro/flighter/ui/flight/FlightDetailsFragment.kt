@@ -1,13 +1,12 @@
-package br.com.raywenderlich.flighter.ui.flight
+package br.com.phro.flighter.ui.flight
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import br.com.raywenderlich.flighter.databinding.FragmentFlightDetailsBinding
-import br.com.raywenderlich.flighter.ui.flight.FlightSearchFragment.Companion.FLIGHT_ID
+import br.com.phro.flighter.databinding.FragmentFlightDetailsBinding
+import br.com.phro.flighter.ui.flight.FlightSearchFragment.Companion.FLIGHT_ID
 import org.koin.android.ext.android.inject
 
 class FlightDetailsFragment : Fragment() {

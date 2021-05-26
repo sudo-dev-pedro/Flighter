@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="br.com.raywenderlich.flighter.ui.home.HomeFragment"
+        android:name="br.com.phro.flighter.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home">
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="br.com.raywenderlich.flighter.ui.flight.FlightSearchFragment"
+        android:name="br.com.phro.flighter.ui.flight.FlightSearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_flight_search">
         <action
@@ -27,13 +27,13 @@
 
     <fragment
         android:id="@+id/navigation_flight_details"
-        android:name="br.com.raywenderlich.flighter.ui.flight.FlightDetailsFragment"
+        android:name="br.com.phro.flighter.ui.flight.FlightDetailsFragment"
         android:label="Flight Details"
         tools:layout="@layout/fragment_flight_details" />
 
     <fragment
         android:id="@+id/navigation_boarding"
-        android:name="br.com.raywenderlich.flighter.ui.boarding.BoardingFragment"
+        android:name="br.com.phro.flighter.ui.boarding.BoardingFragment"
         android:label="@string/title_boarding"
         tools:layout="@layout/fragment_boarding" />
 
