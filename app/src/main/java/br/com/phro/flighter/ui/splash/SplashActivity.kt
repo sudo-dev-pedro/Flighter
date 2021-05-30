@@ -18,7 +18,7 @@ import org.koin.core.component.KoinApiExtension
 class SplashActivity : AppCompatActivity() {
     private val coroutineScope by lazy { CoroutineScope(Dispatchers.IO) }
 
-    private val splashViewModel: SplashViewModel by inject()
+//    private val splashViewModel: SplashViewModel by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,8 +29,10 @@ class SplashActivity : AppCompatActivity() {
 
     private fun navigateToLoginActivity() {
         coroutineScope.launch {
-            splashViewModel.generateFlightsDemoData("AAA", "BBB", "22/05/2021")
-            delay(2000)
+            delay(3000)
+//            splashViewModel.generateAirplanesDemoData()
+//            splashViewModel
+//                .generateFlightsDemoData("AAA", "BBB", "22/05/2021")
 
             withContext(Dispatchers.Main) {
                 startActivity(
