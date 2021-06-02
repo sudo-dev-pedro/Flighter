@@ -4,11 +4,20 @@ import br.com.phro.flighter.dao.PassengerDAO
 import br.com.phro.flighter.database.entity.Passenger
 import br.com.phro.flighter.di.appModule
 import br.com.phro.flighter.repository.PassengerRepositoryImpl
-import io.mockk.*
+import io.mockk.MockKAnnotations
+import io.mockk.coEvery
+import io.mockk.coVerify
+import io.mockk.just
+import io.mockk.Runs
+import io.mockk.clearAllMocks
 import io.mockk.impl.annotations.MockK
-import junit.framework.TestCase
+import junit.framework.Assert.assertEquals
+import junit.framework.Assert.assertNull
 import kotlinx.coroutines.runBlocking
-import org.junit.*
+import org.junit.Before
+import org.junit.Rule
+import org.junit.Test
+import org.junit.After
 import org.koin.core.context.loadKoinModules
 import org.koin.core.context.stopKoin
 import org.koin.dsl.module
@@ -52,24 +61,22 @@ class PassengerRepositoryImplTest : KoinTest {
     }
 
     @Test
-    fun `when passed an passenger should insert`() {
+    fun `when passed an passenger should insert`() = runBlocking {
 
-        // Behavior (given)
-        every {
-            runBlocking {
-                passengerDAO.insert(
-                    passenger = Passenger(
-                        234,
-                        "222",
-                        "ph@email.com",
-                        "12345",
-                        "P",
-                        "H",
-                        "12/01/1990",
-                        null
-                    )
+        // Given
+        coEvery {
+            passengerDAO.insert(
+                passenger = Passenger(
+                    234,
+                    "222",
+                    "ph@email.com",
+                    "12345",
+                    "P",
+                    "H",
+                    "12/01/1990",
+                    null
                 )
-            }
+            )
         } just Runs
 
         // When
@@ -84,63 +91,54 @@ class PassengerRepositoryImplTest : KoinTest {
             null
         )
 
-        // Then
-        runBlocking {
-            passengerRepositoryImpl.insertPassenger(passenger)
-        }
+        passengerRepositoryImpl.insertPassenger(passenger)
 
-        verify {
-            runBlocking {
-                passengerRepositoryImpl.insertPassenger(passenger)
-            }
+        // Then
+        coVerify {
+            passengerRepositoryImpl.insertPassenger(passenger)
         }
     }
 
     @Test
-    fun `should get the passenger id`() {
-        // Behavior (given)
+    fun `should get the passenger id`() = runBlocking {
+
+        // Given
         val id = 123L
         val email = "ph@mail.com"
         val password = "12345"
 
-        every {
-            runBlocking {
-                passengerDAO.getUserId(
-                    email = email,
-                    password = password
-                )
-            }
+        coEvery {
+            passengerDAO.getUserId(
+                email = email,
+                password = password
+            )
+
         } returns id
 
-        runBlocking {
-            val returnedId = passengerRepositoryImpl.getUserId(email = email, password = password)
-            // Then
-            Assert.assertEquals(123L, returnedId)
-        }
+        val returnedId = passengerRepositoryImpl.getUserId(email = email, password = password)
+
+        // Then
+        assertEquals(123L, returnedId)
     }
 
     @Test
-    fun `should not get the passenger id`() {
-        // Behavior (given)
+    fun `should not get the passenger id`() = runBlocking {
+        // Given
         val email = "ph@mail.com"
         val password = "12345"
 
-        every {
-            runBlocking {
-                passengerDAO.getUserId(
-                    email = email,
-                    password = password
-                )
-            }
+        coEvery {
+            passengerDAO.getUserId(
+                email = email,
+                password = password
+            )
         } returns null
 
-        runBlocking {
-            // When
-            val returnedId = passengerRepositoryImpl.getUserId(email = email, password = password)
+        // When
+        val returnedId = passengerRepositoryImpl.getUserId(email = email, password = password)
 
-            // Then
-            TestCase.assertNull(returnedId)
-        }
+        // Then
+        assertNull(returnedId)
     }
 
     @After
