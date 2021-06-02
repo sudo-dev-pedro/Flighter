@@ -9,8 +9,13 @@ import androidx.test.platform.app.InstrumentationRegistry
 import br.com.phro.flighter.dao.AirplaneDAO
 import br.com.phro.flighter.database.AppDatabase
 import br.com.phro.flighter.database.data.AirplanesProvider
+import junit.framework.Assert.assertEquals
+import junit.framework.Assert.assertTrue
 import kotlinx.coroutines.runBlocking
-import org.junit.*
+import org.junit.Rule
+import org.junit.After
+import org.junit.Before
+import org.junit.Test
 import org.junit.rules.TestRule
 import org.junit.runner.RunWith
 
@@ -26,6 +31,7 @@ class AirplanesDAOTest {
     @Before
     fun setup() {
         val context: Context = InstrumentationRegistry.getInstrumentation().context
+
         try {
             database = Room.inMemoryDatabaseBuilder(context, AppDatabase::class.java)
                 // Sem essa permissão o Room lança um erro!
@@ -41,32 +47,27 @@ class AirplanesDAOTest {
     }
 
     @Test
-    fun testInsertAirplanes() {
+    fun testInsertAirplanes() = runBlocking {
         for (airplane in AirplanesProvider.airplanesList) {
-            runBlocking {
-                airplaneDAO.insertAirplane(airplane)
-            }
+            airplaneDAO.insertAirplane(airplane)
         }
 
         val numberOfAirplanes = airplaneDAO.getAllAirplanes().size
 
-        Assert.assertEquals(2, numberOfAirplanes)
+        assertEquals(2, numberOfAirplanes)
     }
 
     @Test
-    fun testClearPassengers() {
+    fun testClearPassengers() = runBlocking {
         for (airplane in AirplanesProvider.airplanesList) {
-            runBlocking {
-                airplaneDAO.insertAirplane(airplane)
-            }
+            airplaneDAO.insertAirplane(airplane)
         }
 
-        Log.d("Teste", airplaneDAO.getAllAirplanes().size.toString())
-
-        Assert.assertTrue(airplaneDAO.getAllAirplanes().isNotEmpty())
+        assertTrue(airplaneDAO.getAllAirplanes().isNotEmpty())
 
         airplaneDAO.clearTable()
-        Assert.assertTrue(airplaneDAO.getAllAirplanes().isEmpty())
+
+        assertTrue(airplaneDAO.getAllAirplanes().isEmpty())
     }
 
     @After
