@@ -17,8 +17,8 @@ import org.junit.runner.RunWith
 
 @RunWith(AndroidJUnit4::class)
 class PassengersDAOTest {
-    @Rule
-    @JvmField
+
+    @get:Rule
             /*
             Tudo será executado na Main Thread para que sejam executados de forma síncrona e sequencial.
             */
@@ -30,7 +30,9 @@ class PassengersDAOTest {
     // Before significa dizer que essa fun deverá ser executada antes de QUALQUER teste!
     @Before
     fun setup() {
+
         val context: Context = InstrumentationRegistry.getInstrumentation().context
+
         try {
             /*
             Criação do banco de dados em memória, sendo assim TODOS os dados serão
@@ -46,11 +48,12 @@ class PassengersDAOTest {
                 Log.i(this.javaClass.simpleName, errorMessage)
             }
         }
+
         passengerDAO = database.passengerDAO()
     }
 
     @Test
-    fun testInsertPassenger() {
+    fun testInsertPassenger() = runBlocking {
         val passenger = Passenger(
             234,
             "222",
@@ -61,9 +64,8 @@ class PassengersDAOTest {
             "12/01/1990",
             null
         )
-        runBlocking {
-            passengerDAO.insert(passenger)
-        }
+
+        passengerDAO.insert(passenger)
 
         val numberOfPassengers = passengerDAO.getAllPassengers().size
 
@@ -71,15 +73,12 @@ class PassengersDAOTest {
     }
 
     @Test
-    fun testClearPassengers() {
+    fun testClearPassengers() = runBlocking {
         for (passenger in PassengersProvider.passengersList) {
-            runBlocking {
-                passengerDAO.insert(passenger)
-            }
-
+            passengerDAO.insert(passenger)
         }
+
         Assert.assertTrue(passengerDAO.getAllPassengers().isNotEmpty())
-        Log.d("testData", passengerDAO.getAllPassengers().toString())
 
         passengerDAO.clearTable()
         Assert.assertTrue(passengerDAO.getAllPassengers().isEmpty())
