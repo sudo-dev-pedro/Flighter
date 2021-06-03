@@ -19,6 +19,6 @@ class FlightRepositoryImpl(
     override suspend fun getFlightById(flightId: Long?): Flight = flightDAO.getFlightById(flightId)
 
     override suspend fun deleteFlight(flight: Flight) {
-        TODO("Not yet implemented")
+        flightDAO.deleteFlight(flight)
     }
 }

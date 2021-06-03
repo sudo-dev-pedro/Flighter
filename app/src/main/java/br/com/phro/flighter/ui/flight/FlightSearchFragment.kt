@@ -53,12 +53,6 @@ class FlightSearchFragment : Fragment() {
         searchBinding?.toCityNameSearch?.text = param2
         searchBinding?.flightDepartDateResult?.text = param3
 
-        flightSearchViewModel.generateFlightsDemoData(
-            searchBinding?.fromCityNameSearch?.text.toString(),
-            searchBinding?.toCityNameSearch?.text.toString(),
-            searchBinding?.flightDepartDateResult?.text.toString()
-        )
-
         flightSearchViewModel.getFlights(
             searchBinding?.fromCityNameSearch?.text.toString(),
             searchBinding?.toCityNameSearch?.text.toString()
