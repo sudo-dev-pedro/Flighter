@@ -11,8 +11,8 @@ import io.mockk.just
 import io.mockk.Runs
 import io.mockk.clearAllMocks
 import io.mockk.impl.annotations.MockK
-import junit.framework.Assert.assertEquals
-import junit.framework.Assert.assertNull
+import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase.assertNull
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Rule
@@ -38,7 +38,6 @@ class PassengerRepositoryImplTest : KoinTest {
     // Dar o start no nosso contexto do Koin e realiza a criação do mesmo para o meu teste.
     @get:Rule
     val koinTestRule = KoinTestRule.create {
-        printLogger()
         modules(appModule)
     }
 
