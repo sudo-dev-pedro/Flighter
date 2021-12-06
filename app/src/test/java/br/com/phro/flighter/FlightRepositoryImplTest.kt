@@ -35,7 +35,6 @@ class FlightRepositoryImplTest : KoinTest {
 
     @get:Rule
     val koinTestRule = KoinTestRule.create {
-        printLogger()
         modules(appModule)
     }
 
