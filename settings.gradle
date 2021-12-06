@@ -1,2 +1,4 @@
 include ':app'
 rootProject.name = "Flighter"
+include ':core'
+include ':infrastructure'
