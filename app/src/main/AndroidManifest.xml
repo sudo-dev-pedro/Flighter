@@ -13,7 +13,8 @@
 
         <activity
             android:name="br.com.phro.flighter.ui.splash.SplashActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,8 +27,7 @@
         <activity android:name="br.com.phro.flighter.ui.login.LoginActivity" />
 
         <activity
-            android:name="br.com.phro.flighter.MainActivity"
-            android:label="@string/app_name" />
+            android:name="br.com.phro.flighter.MainActivity" />
 
     </application>
 
