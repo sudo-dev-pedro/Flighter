@@ -1,7 +1,6 @@
 package br.com.phro.flighter.dao
 
 import androidx.room.*
-import br.com.phro.flighter.database.DatabaseConstants
 import br.com.phro.flighter.database.DatabaseConstants.AIRPLANE_TABLE_NAME
 import br.com.phro.flighter.database.entity.Airplane
 

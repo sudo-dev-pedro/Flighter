@@ -1,9 +1,6 @@
 package br.com.phro.flighter.database.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.ForeignKey
-import androidx.room.PrimaryKey
+import androidx.room.*
 import br.com.phro.flighter.database.DatabaseConstants.FLIGHT_TABLE_NAME
 
 @Entity(
@@ -16,7 +13,8 @@ import br.com.phro.flighter.database.DatabaseConstants.FLIGHT_TABLE_NAME
             onDelete = ForeignKey.NO_ACTION,
             onUpdate = ForeignKey.CASCADE
         ))
-    ]
+    ],
+    indices = [Index("airplane_id")]
 )
 
 data class Flight(

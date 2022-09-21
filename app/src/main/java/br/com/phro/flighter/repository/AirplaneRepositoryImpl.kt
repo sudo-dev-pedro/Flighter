@@ -2,11 +2,9 @@ package br.com.phro.flighter.repository
 
 import br.com.phro.flighter.dao.AirplaneDAO
 import br.com.phro.flighter.database.entity.Airplane
-import org.koin.core.component.KoinApiExtension
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-@KoinApiExtension
 class AirplaneRepositoryImpl : AirplaneRepository, KoinComponent {
 
     private val airplaneDAO: AirplaneDAO by inject()

@@ -17,7 +17,10 @@ import br.com.phro.flighter.database.DatabaseConstants.BOOK_TABLE_NAME
             childColumns = ["flight_id"])
         )
     ],
-    indices = [Index("passenger_id")]
+    indices = [
+        Index("passenger_id"),
+        Index("flight_id")
+    ]
 )
 data class Book(
     @PrimaryKey(autoGenerate = true)
